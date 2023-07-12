@@ -1,1 +1,29 @@
-
+on:
+  workflow_dispatch:
+    inputs:
+      ACTIVE_API_URL:
+        description: 'The URL of the scanner settings'
+        default: 'https://10.10.10.184/active'
+        required: false
+        type: string
+      ACTIVE_SEVERITY_THRESHOLD:
+        description: build disturb on error level supported values [high , medium, low, info, none]
+        default: none
+        required: false
+        type: choice
+        options:
+          - high
+          - medium
+          - low
+          - info
+          - none
+     	ACTIVE_CONFIG_FILE_PATH:
+        description: The config file path.
+        default: '<YOUR_ACTIVE_CONFIG_FILE_PATH>'
+        required: false
+        type: string
+	ACTIVE_TEST_GROUP_ID:
+        description: test group id.
+        default: '<YOUR_ACTIVE_ACTIVE_TEST_GROUP_ID>'
+        required: false
+        type: string
