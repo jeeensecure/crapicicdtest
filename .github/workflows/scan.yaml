@@ -3,7 +3,7 @@ on:
     inputs:
       ACTIVE_API_URL:
         description: 'The URL of the scanner settings'
-        default: 'https://10.10.10.184/active'
+        default: https://10.10.10.184/active
         required: false
         type: string
       ACTIVE_SEVERITY_THRESHOLD:
@@ -19,11 +19,11 @@ on:
           - none
      	ACTIVE_CONFIG_FILE_PATH:
         description: The config file path.
-        default: 'active-config.json'
+        default: active-config.json
         required: false
         type: string
 	ACTIVE_TEST_GROUP_ID:
         description: test group id.
-        default: '62f5921c-d200-4f6f-a104-29674ad30a94'
+        default: 62f5921c-d200-4f6f-a104-29674ad30a94
         required: false
         type: string
