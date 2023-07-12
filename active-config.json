@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "applicationId": "fd4bf044-bba4-498d-8a55-eb0f0fecc2fb",
+  "host": "http://10.10.10.164:8888",
+  "sources": [
+    {
+      "name": "crAPICICDtest",
+      "openApi": {
+        "sourceUrl": "http://10.10.10.164:8888"
+      }
+    }
+  ],
+  "auths": [
+    {
+      "name": "crapi_user1",
+      "role": "reader / writer",
+      "secrets": [
+        {
+          "name": "postman",
+          "postman": {
+            "sourceInline": "{\"info\":{\"_postman_id\":\"dfc5944b-cafa-48f7-86b9-478c8311a0c5\",\"name\":\"crAPI - auth user1.json\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"_exporter_id\":\"20336086\"},\"item\":[{\"name\":\"Login\",\"request\":{\"auth\":{\"type\":\"noauth\"},\"method\":\"POST\",\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\",\"type\":\"text\"}],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"email\\\": \\\"crapi_user1@nonamesec.com\\\",\\n    \\\"password\\\": \\\"Aa123456!@\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"10.10.10.164:8888/identity/api/auth/login\",\"protocol\":\"http\",\"host\":\"10.10.10.164\",\"port\":\"8888\",\"path\":[\"identity\",\"api\",\"auth\",\"login\"]}},\"response\":[]}]}",
+            "sourceBody": "$.token",
+            "targetHeader": {
+              "headerKey": "Authorization",
+              "headerValueTemplate": "Bearer {}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "crapi_user2",
+      "role": "reader / writer",
+      "secrets": [
+        {
+          "name": "postman",
+          "postman": {
+            "sourceInline": "{\"info\":{\"_postman_id\":\"dfc5944b-cafa-48f7-86b9-478c8311a0c5\",\"name\":\"crAPI - auth user2.json\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"_exporter_id\":\"20336086\"},\"item\":[{\"name\":\"Login\",\"request\":{\"auth\":{\"type\":\"noauth\"},\"method\":\"POST\",\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\",\"type\":\"text\"}],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"email\\\": \\\"crapi_user2@nonamesec.com\\\",\\n    \\\"password\\\": \\\"Aa123456!@\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"10.10.10.164:8888/identity/api/auth/login\",\"protocol\":\"http\",\"host\":\"10.10.10.164\",\"port\":\"8888\",\"path\":[\"identity\",\"api\",\"auth\",\"login\"]}},\"response\":[]}]}",
+            "sourceBody": "$.token",
+            "targetHeader": {
+              "headerKey": "Authorization",
+              "headerValueTemplate": "Bearer {}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
