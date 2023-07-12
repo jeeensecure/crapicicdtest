@@ -19,7 +19,7 @@ on:
           - none
      	ACTIVE_CONFIG_FILE_PATH:
         description: The config file path.
-        default: 'active_config.json'
+        default: 'active-config.json'
         required: false
         type: string
 	ACTIVE_TEST_GROUP_ID:
